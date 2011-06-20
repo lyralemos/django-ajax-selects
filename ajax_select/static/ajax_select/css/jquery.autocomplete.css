@@ -1,6 +1,6 @@
 .ac_results {
 	padding: 0px;
-	border: 1px solid black;
+	border: 1px solid #646464;
 	background-color: white;
 	overflow: hidden;
 	z-index: 99999;
@@ -44,7 +44,7 @@
 }
 
 .ac_over {
-	background-color: #0A246A;
+	background-color: #4294FF;
 	color: white;
 }
 /*../img/admin/icon_deletelink.gif*/

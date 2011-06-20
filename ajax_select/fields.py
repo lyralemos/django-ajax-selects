@@ -276,7 +276,6 @@ def _check_can_add(self,user,model):
 
 def autoselect_fields_check_can_add(form,model,user):
     """ check the form's fields for any autoselect fields and enable their widgets with + sign add links if permissions allow"""
-    print form
     for name,form_field in form.declared_fields.iteritems():
         if isinstance(form_field,(AutoCompleteSelectMultipleField,AutoCompleteSelectField)):
             db_field = model._meta.get_field_by_name(name)[0]
