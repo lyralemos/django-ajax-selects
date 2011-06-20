@@ -65,7 +65,16 @@ class AutoCompleteSelectWidget(forms.widgets.TextInput):
             return long(got)
         else:
             return None
-
+    
+    class Media():
+        css = {
+            'all': ('ajax_select/css/jquery.autocomplete.css',)
+        }
+        js = (
+            'ajax_select/js/jquery.bgiframe.min.js',
+            'ajax_select/js/jquery.ajaxQueue.js',
+            'ajax_select/js/jquery.autocomplete.js'
+        )
 
 
 class AutoCompleteSelectField(forms.fields.CharField):
@@ -267,6 +276,7 @@ def _check_can_add(self,user,model):
 
 def autoselect_fields_check_can_add(form,model,user):
     """ check the form's fields for any autoselect fields and enable their widgets with + sign add links if permissions allow"""
+    print form
     for name,form_field in form.declared_fields.iteritems():
         if isinstance(form_field,(AutoCompleteSelectMultipleField,AutoCompleteSelectField)):
             db_field = model._meta.get_field_by_name(name)[0]

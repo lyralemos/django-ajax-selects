@@ -1,3 +1,54 @@
+.ac_results {
+	padding: 0px;
+	border: 1px solid black;
+	background-color: white;
+	overflow: hidden;
+	z-index: 99999;
+	min-width:300px !important;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: default;
+	display: block;
+	/* 
+	if width will be 100% horizontal scrollbar will apear 
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font: menu;
+	font-size: 12px;
+	/* 
+	it is very important, if line-height not setted or setted 
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 16px;
+	overflow: hidden;
+}
+
+.ac_loading {
+	background: white url('../loading-indicator.gif') right center no-repeat;
+}
+
+.ac_odd {
+	background-color: #eee;
+}
+
+.ac_over {
+	background-color: #0A246A;
+	color: white;
+}
+/*../img/admin/icon_deletelink.gif*/
+
 /*
 	most of the css that makes it look good is in the jquery.autocomplete.css that comes with the autocomplete plugin.
 	that formats the dropdown of search results.
@@ -25,12 +76,18 @@ input.ac_loading {
 	background: #FFF url('../images/loading-indicator.gif') no-repeat;
 	background-position: right;
 }
+.results_on_deck{
+	padding:2px 0 0 108px; 
+}
 
+.inline-group .results_on_deck{
+	padding:0;
+}
 
 /* change the X to an image */
 .results_on_deck .iconic, .results_on_deck .iconic:hover {
     float: left;
-    background: url(../shared/images/Trashcan.gif) no-repeat;
+    background: url(../../admin/img/admin/icon_deletelink.gif) no-repeat 0 2px;
     color: transparent;
     border: 0;
 }

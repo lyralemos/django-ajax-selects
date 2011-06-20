@@ -2,7 +2,8 @@
 <input type="text" name="{{ name }}" id="{{ html_id }}" value="{{ current_name }}" {{ extra_attrs }} />
 {% block help %}{# {% if help_text %}<p class="help">{{ help_text }}</p>{% endif %} #}{% endblock %}
 <script type="text/javascript">
-jQuery(document).ready(function($){{% block script %}
+django.jQuery(document).ready(function($){{% block script %}
+    $ = django.jQuery
 	$('#{{ html_id }}').autocomplete('{{ lookup_url }}', {
 		width: 320,
 		formatItem: function(row) { return row[2]; },

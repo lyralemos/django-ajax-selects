@@ -7,7 +7,8 @@
 <div id="{{html_id}}_on_deck" class="results_on_deck"><div>{{current_result|safe}}</div></div>
 <input type="hidden" name="{{name}}" id="{{html_id}}" value="{{current_id}}" />
 <script type="text/javascript">
-jQuery(document).ready(function($){{% block script %}
+django.jQuery(document).ready(function($){{% block script %}
+	$ = django.jQuery
 	$("#{{html_id}}_text").autocomplete('{{lookup_url}}', {
 		width: 320,
 		formatItem: function(row) { return row[2]; },

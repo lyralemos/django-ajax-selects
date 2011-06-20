@@ -39,7 +39,7 @@ def make_ajax_form(model,fieldlist,superclass=ModelForm):
 
     for model_fieldname,channel in fieldlist.iteritems():
         f = make_ajax_field(model,model_fieldname,channel)
-        
+
         TheForm.declared_fields[model_fieldname] = f
         TheForm.base_fields[model_fieldname] = f
         setattr(TheForm,model_fieldname,f)

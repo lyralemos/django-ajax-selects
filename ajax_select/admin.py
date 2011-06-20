@@ -12,4 +12,3 @@ class AjaxSelectAdmin(admin.ModelAdmin):
         
         autoselect_fields_check_can_add(form,self.model,request.user)
         return form
-
