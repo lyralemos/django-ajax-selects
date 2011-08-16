@@ -176,6 +176,16 @@ class AutoCompleteSelectMultipleWidget(forms.widgets.SelectMultiple):
     def value_from_datadict(self, data, files, name):
         # eg. u'members': [u'|229|4688|190|']
         return [long(val) for val in data.get(name,'').split('|') if val]
+    
+    class Media():
+        css = {
+            'all': ('ajax_select/css/jquery.autocomplete.css',)
+        }
+        js = (
+            'ajax_select/js/jquery.bgiframe.min.js',
+            'ajax_select/js/jquery.ajaxQueue.js',
+            'ajax_select/js/jquery.autocomplete.js'
+        )
 
 
 

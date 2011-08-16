@@ -7,8 +7,8 @@
 <p id="{{html_id}}_on_deck" class="results_on_deck"></p>
 <input type="hidden" name="{{name}}" id="{{html_id}}" value="{{current_ids}}" />
 <script type="text/javascript">
-djnago.jQuery(document).ready(function($){{% block script %}
-	$ = djnago.jQuery
+django.jQuery(document).ready(function($){{% block script %}
+	$ = django.jQuery
 	$("#{{html_id}}_text").autocomplete('{{lookup_url}}', {
 		width: 320,
 		multiple: true,
